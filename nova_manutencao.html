@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova manutenção</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background: #d9d9d9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .phone {
+        width: 360px;
+        height: 720px;
+        background: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: inline-block;
+        width: 60px;
+        font-size: 16px;
+    }
+
+    input, select {
+        padding: 6px;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .checklist {
+        margin-top: 20px;
+    }
+
+    .checklist h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .checklist label {
+        display: block;
+        width: auto;
+        margin: 6px 0;
+        font-size: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(#7da1c8, #5f85b3);
+        border: none;
+        border-radius: 4px;
+        color: #0d1b2a;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+    <div>
+        <div class="title">Nova manutenção</div>
+
+        <div class="form-group">
+            <label>Data:</label>
+            <input type="text" id="data" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>Tipo:</label>
+            <select>
+                <option>PREVENTIVA</option>
+                <option>CORRETIVA</option>
+                <option>PREDITIVA</option>
+            </select>
+        </div>
+
+        <div class="checklist">
+            <h3>Check list</h3>
+
+            <label><input type="checkbox"> Limpeza da refrigeração</label>
+            <label><input type="checkbox"> Lubrificação dos pinos</label>
+            <label><input type="checkbox"> Lubrificação das buchas</label>
+            <label><input type="checkbox"> Limpeza dos gates</label>
+            <label><input type="checkbox"> Limpeza dos parafusos</label>
+        </div>
+    </div>
+
+    <button class="btn">Gravar</button>
+</div>
+
+<script>
+    // Preenche automaticamente a data atual
+    function formatarDataHoje() {
+        const hoje = new Date();
+        const dia = String(hoje.getDate()).padStart(2, '0');
+        const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+        const ano = hoje.getFullYear();
+        return `${dia}/${mes}/${ano}`;
+    }
+
+    document.getElementById("data").value = formatarDataHoje();
+</script>
+
+</body>
+</html>

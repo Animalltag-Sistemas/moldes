@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Histórico de manutenções</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background: #d9d9d9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .phone {
+        width: 360px;
+        height: 720px;
+        background: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        background: #ddd;
+    }
+
+    th {
+        background: #d8344f;
+        color: white;
+        padding: 10px 5px;
+        border: 1px solid #999;
+    }
+
+    td {
+        background: #cfcfcf;
+        padding: 10px 5px;
+        text-align: center;
+        border: 1px solid #999;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(#7da1c8, #5f85b3);
+        border: none;
+        border-radius: 4px;
+        color: #0d1b2a;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+    <div>
+        <div class="title">Histórico de manutenções</div>
+
+        <table>
+            <tr>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Local</th>
+            </tr>
+            <tr>
+                <td>23/06/2025</td>
+                <td>PREVENTIVA</td>
+                <td>INTERNA</td>
+            </tr>
+            <tr>
+                <td>30/06/2025</td>
+                <td>PREVENTIVA</td>
+                <td>INTERNA</td>
+            </tr>
+            <tr>
+                <td>06/07/2025</td>
+                <td>PREVENTIVA</td>
+                <td>INTERNA</td>
+            </tr>
+            <tr>
+                <td>13/07/2025</td>
+                <td>PREVENTIVA</td>
+                <td>INTERNA</td>
+            </tr>
+            <tr>
+                <td>20/07/2025</td>
+                <td>PREVENTIVA</td>
+                <td>EXTERNA</td>
+            </tr>
+            <tr>
+                <td>23/06/2025</td>
+                <td>CORRETIVA</td>
+                <td>EXTERNA</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+	<button class="btn" onclick="abrirNova()">Nova manutenção</button>
+
+	<script>
+	function abrirNova() {
+	    window.location.href = "nova_manutencao.html";
+	}
+	</script>
+
+</div>
+
+</body>
+</html>
